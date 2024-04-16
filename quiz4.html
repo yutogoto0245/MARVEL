@@ -28,11 +28,12 @@
     <img src="imgs/daniel.jpg">
     <p>ダニエル</p>
   </div>
-  <p>この問題は少し難しいぞ。まぁ、映画を観ていれば簡単だかな</p>
+  <p>注意深く映画を見ていれば、必ず解けるぞ</p>
   <section id="quiz4">
+    <p>左から読め</p>
     <div id="Shuriken">
-      <img id="Red" src="imgs/Q4/red.png" width="80px" height="80px">
-      <img id="Blue" src="imgs/Q4/blue.png" width="80px" height="80px">
+      <img id="Red" src="imgs/Q4/red.png" width="50px" height="50px">
+      <img id="Blue" src="imgs/Q4/blue.png" width="50px" height="50px">
     </div>
     <div id="Changed-img">
       <img id="Antoman" src="imgs/Q4/antman.png">
@@ -61,13 +62,13 @@ function picMove(onpointermove) {
       this.setPointerCapture(event.pointerId)
 
       let RedPosi = Red.getBoundingClientRect();
-      let RedLeft = Number(window.pageXOffset + RedPosi.left + 40); 
-      let RedTop = Number(window.pageYOffset + RedPosi.top + 40);
+      let RedLeft = Number(window.pageXOffset + RedPosi.left + 25); 
+      let RedTop = Number(window.pageYOffset + RedPosi.top + 25);
       let RedHeight = RedPosi.height + window.pageYOffset + RedPosi.top + 'px';
 
       let BluePosi = Blue.getBoundingClientRect();
-      let BlueLeft = Number(window.pageXOffset +BluePosi.left); 
-      let BlueTop = Number(window.pageYOffset + BluePosi.top);
+      let BlueLeft = Number(window.pageXOffset +BluePosi.left + 25); 
+      let BlueTop = Number(window.pageYOffset + BluePosi.top + 25);
       let BlueHeight = BluePosi.height + window.pageYOffset + BluePosi.top + 'px';
       
       const Antoman = document.getElementById('Antoman');
@@ -108,31 +109,58 @@ function picMove(onpointermove) {
       let PopoTop = Number(window.pageYOffset + PopoPosi.top);
       let PopoHeight = Number(PopoPosi.height + window.pageYOffset + PopoPosi.top);
 
-
-      if(RedLeft > AntomanLeft && RedLeft < AntomanWidth && RedTop > AntomanTop && RedTop < AntomanHeight){
-        Antoman.style.backgroundColor = 'red';
+      
+      if(RedLeft > AntomanLeft && RedLeft < AntomanWidth && RedTop > AntomanTop && RedTop < AntomanHeight){ //Antoman become smaller
+        // Antoman.style.backgroundColor = 'red';
         Antoman.style.top = '5px';
         Antoman.style.left = '6px';
         Antoman.style.height = '20px';
-      } else if(BlueLeft > AntomanLeft && BlueLeft < AntomanWidth && BlueTop > AntomanTop && BlueTop < AntomanHeight){
-        Antoman.style.background = 'blue';
+      } else if(BlueLeft > AntomanLeft && BlueLeft < AntomanWidth && BlueTop > AntomanTop && BlueTop < AntomanHeight){ //Antoman become Big
+        // Antoman.style.background = 'blue';
         Antoman.style.top = '5px';
         Antoman.style.left = '9px';
         Antoman.style.height = '380px';
-      } else if(RedLeft > TankerLeft && RedLeft < TankerWidth && RedTop > TankerTop && RedTop < TankerHeight){
-        Tanker.style.backgroundColor = 'red';
+      } else if(RedLeft > TankerLeft && RedLeft < TankerWidth && RedTop > TankerTop && RedTop < TankerHeight){ //Tanker became smaller
+        // Tanker.style.backgroundColor = 'red';
         Tanker.style.top = '80px';
         Tanker.style.left = '207px';
         Tanker.style.height = '50px';
-        console.log(TankerLeft);
-        console.log(TankerWidth);
-        console.log(TankerTop);
-      } else if(BlueLeft > TankerLeft && BlueLeft < TankerWidth && BlueTop > TankerTop && BlueTop < TankerHeight){
-        Tanker.style.backgroundColor = 'blue';
+      } else if(BlueLeft > TankerLeft && BlueLeft < TankerWidth && BlueTop > TankerTop && BlueTop < TankerHeight){ //Tanker became Big
+        // Tanker.style.backgroundColor = 'blue';
         Tanker.style.top = '53px';
         Tanker.style.left = '175px';
         Tanker.style.height = '270px';
-    }
+      } else if(RedLeft > SoltLeft && RedLeft < SoltWidth && RedTop > SoltTop && RedTop < SoltHeight){ //Solt became smaller
+        // Solt.style.backgroundColor = 'red';
+        Solt.style.top = '290px';
+        Solt.style.left = '550px';
+        Solt.style.height = '110px';
+      } else if(BlueLeft > SoltLeft && BlueLeft < SoltWidth && BlueTop > SoltTop && BlueTop < SoltHeight){ //Solt became Big
+        // Solt.style.backgroundColor = 'blue';
+        Solt.style.top = '20px';
+        Solt.style.left = '390px';
+        Solt.style.height = '380px';
+      } else if(RedLeft > BinLeft && RedLeft < BinWidth && RedTop > BinTop && RedTop < BinHeight){ //Bin became smaller
+        // Bin.style.backgroundColor = 'red';
+        Bin.style.top = '290px';
+        Bin.style.left = '220px';
+        Bin.style.height = '110px';
+      } else if(BlueLeft > BinLeft && BlueLeft < BinWidth && BlueTop > BinTop && BlueTop < BinHeight){ //Bin became Big
+        // Bin.style.backgroundColor = 'blue';
+        Bin.style.top = '5px';
+        Bin.style.left = '212px';
+        Bin.style.height = '340px';
+      } else if(RedLeft > PopoLeft && RedLeft < PopoWidth && RedTop > PopoTop && RedTop < PopoHeight){ //Popo became smaller
+        // Popo.style.backgroundColor = 'red';
+        Popo.style.top = '150px';
+        Popo.style.left = '790px';
+        Popo.style.height = '240px';
+      } else if(BlueLeft > PopoLeft && BlueLeft < PopoWidth && BlueTop > PopoTop && BlueTop < PopoHeight){ //Popo became Big
+        // Popo.style.backgroundColor = 'blue';
+        Popo.style.top = '0px';
+        Popo.style.left = '650px';
+        Popo.style.height = '400px';
+      }
   }
 }
 const Red = document.getElementById('Red');

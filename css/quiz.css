@@ -48,7 +48,7 @@
 #quiz4 {
   background-color: rgba(0, 0, 0, 1);
   text-align: center;
-  height: 500px;
+  height: 600px;
   width: 1100px;
   display: flex;
   flex-flow: column;
@@ -61,60 +61,22 @@
   position: relative;
   width: 1000px;
   height: 400px;
-  background-image: url(../imgs/Q4/K\ \(1\).png);
+  background-image: url(../imgs/Q4/keyword.png);
 }
 #Shuriken {
-  height: 70px;
+  height: 50px;
   z-index: 999;
   top: 0px;
-}
-#Shuriken > img {
-  background-color: aqua;
 }
 
 
 
 #Changed-img > img {
   display: inline-block;
-  background-color: blueviolet;
+  /* background-color: blueviolet; */
   margin: 0;
 }
 /* 正解 */
-#Antoman {
-  position: absolute;
-  top: 5px;
-  left: 9px;
-  height: 380px;
-  /* background-color: ; */
-  z-index: 998;
-}
-#Bin {
-  position: absolute ;
-  top: 340px;
-  left: 250px;
-  height: 50px;
-}
-#Tanker {
-  position: absolute ;
-  top: 53px;
-  left: 175px;
-  height: 270px;
-}
-#Solt {
-  position: absolute;
-  top: 20px;
-  left: 390px;
-  height: 380px;
-}
-#Popo {
-  position: absolute;
-  top: 0px;
-  left: 650px;
-  height: 400px;
-}
-
-/* ２ */
-/* 
 #Antoman {
   position: absolute;
   top: 5px;
@@ -129,15 +91,15 @@
 }
 #Tanker {
   position: absolute ;
-  top: 10px;
-  left: 137px;
+  top: 80px;
+  left: 207px;
   height: 50px;
 }
 #Solt {
   position: absolute;
-  top: 20px;
-  left: 390px;
-  height: 100px;
+  top: 290px;
+  left: 550px;
+  height: 110px;
 }
 #Popo {
   position: absolute;
@@ -145,7 +107,3 @@
   left: 790px;
   height: 240px;
 }
- */
-
-
-
