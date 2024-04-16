@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>謎解きとMARVEL映画</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="謎解きとMARVEL映画">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  
+<header>
+  <nav id="snslogos">
+    <a><img class="snslogo" src="imgs/logo_instagram.png"></li>
+    <a><img class="snslogo" src="imgs/logo_x.png"></li>
+  </nav>
+  <nav id="navigation">
+    <a href="index.html">home</a>
+    <a href="index.html">home</a>
+    <a href="index.html">home</a>
+    <a href="index.html">home</a>
+    <a href="index.html">home</a>
+  </nav>
+</header>
+
+
+
+
+
+</main>
+
+
+
+
+</body>
+<img id="Mind" src="imgs/Q4/Mind_Stone.jpeg" width="40" height="40">
+<img id="Power" src="imgs/Q4/Power_Stone.jpeg" width="40" height="40">
+<img id="Time" src="imgs/Q4/Time_Stone.jpeg" width="40" height="40">
+<img id="Reality" src="imgs/Q4/Reality_Stone.jpeg" width="40" height="40">
+<img id="Soul" src="imgs/Q4/Soul_Stone.jpeg" width="40" height="40">
+<img id="Space" src="imgs/Q4/Space_Stone.jpeg" width="40" height="40">
+<script>
+function stonemove(onpointermove) {
+  if(event.buttons){
+      this.style.left     = this.offsetLeft + event.movementX + 'px'
+      this.style.top      = this.offsetTop  + event.movementY + 'px'
+      this.style.position = 'absolute'
+      this.draggable      = false
+      this.setPointerCapture(event.pointerId)
+  }
+}
+const Mind = document.getElementById('Mind');
+const Power = document.getElementById('Power');
+const Time = document.getElementById('Time');
+const Reality = document.getElementById('Reality');
+const Soul = document.getElementById('Soul');
+const Space = document.getElementById('Space');
+
+Mind.addEventListener('pointermove', stonemove);
+Power.addEventListener('pointermove', stonemove);
+Time.addEventListener('pointermove', stonemove);
+Reality.addEventListener('pointermove', stonemove);
+Soul.addEventListener('pointermove', stonemove);
+Space.addEventListener('pointermove', stonemove);
+
+</script>
+

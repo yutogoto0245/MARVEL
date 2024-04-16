@@ -1,0 +1,28 @@
+/* メイン---------------------------------------- */
+#purpose {
+  /* background-color: aqua; */
+  text-align: center;
+  margin-bottom: 50px;
+}
+#rule {
+  position: relative;
+  display: flex;
+  margin-bottom: 60px;
+}
+#rule > ul {
+  display: inline-block;
+  width: 50%;
+}
+#rule > a {
+  display: inline-block;
+  width: 40%;
+  margin: auto;
+}
+#disney-logo {
+  width: 100%;
+}
+
+/* ボタン---------------------------------------------- */
+#story-btn {
+  text-align: center;
+}

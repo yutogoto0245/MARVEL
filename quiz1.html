@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>謎解きとMARVEL映画</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="謎解きとMARVEL映画">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=1700">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body>
+  
+<header>
+  <nav id="snslogos">
+    <a><img class="snslogo" src="imgs/logo_instagram.png"></li>
+    <a><img class="snslogo" src="imgs/logo_x.png"></li>
+  </nav>
+  <nav id="navigation">
+    <a href="index.html">home</a>
+    <a href="index.html">home</a>
+    <a href="index.html">home</a>
+    <a href="index.html">home</a>
+    <a href="index.html">home</a>
+  </nav>
+</header>
+<main>
+  <div id="daniel-name-pic">
+    <img src="imgs/daniel.jpg">
+    <p>ダニエル</p>
+  </div>
+  <p>トムから話を聞いたよ。君もMARVELが好きなんだって。</br>いいだろう。君にこの謎を解けるかな。</p>
+  <!-- クイズ -->
+  <section id="quiz1">
+    <img src="imgs/Q1/arc_reactor_q.png"></im>
+    <div id="mks">
+      <div>
+        <img class="mk" src="imgs/Q1/mk6.png">
+        <img class="math" src="imgs/Q1/1.png">
+      </div>
+      <div>
+        <img class="mk" src="imgs/Q1/mk6.png">
+        <img class="math" src="imgs/Q1/1.png">
+      </div>
+      <div>
+        <img class="mk" src="imgs/Q1/mk6.png">
+        <img class="math" src="imgs/Q1/1.png">
+      </div>
+      <div>
+        <img class="mk" src="imgs/Q1/mk6.png">
+        <img class="math" src="imgs/Q1/1.png">
+      </div>
+      <div>
+        <img class="mk" src="imgs/Q1/mk6.png">
+        <img class="math" src="imgs/Q1/1.png">
+      </div>
+      <div>
+        <img class="mk" src="imgs/Q1/mk6.png">
+        <img class="math" src="imgs/Q1/1.png">
+      </div>
+    </div>
+    <div>
+      <img src="imgs/Q1/input1.png">
+    </div>
+  </section>
+  <div id="input-box">
+    <input id="input-answer" type="text">
+  </div>
+  <div id="answer">
+    <a id="answer-btn"><img src="imgs/buttons/answer.png"></a>
+  </div>
+</main>
+<!-- 正解時表示 -->
+<div id="correct-answer-box">
+  <div>
+    <h1>正解！</h1>
+    <p>よくやった</p>
+  </div>
+</div>
+<!-- 不正解表示 -->
+<div id="notcorrect-answer-box">
+  <div>
+    <a id="getback-btn"><img src="imgs/buttons/batten.png"></a>
+    <h1>不正解</h1>
+    <p>もう一度確認しよう</p>
+  </div>
+</div>
+
+
+
+
+<script>
+const btnQuiz1 = document.getElementById('answer-btn');
+const correct = document.getElementById('correct-answer-box');
+const text = document.getElementById('input-answer-quiz1');
+const notcorrect = document.getElementById('notcorrect-answer-box');
+const body = document.getElementsByName('body');
+
+
+// HTML要素がクリックされたときにイベント処理を実行する
+btnQuiz1.addEventListener('click', () => {
+  if (text.value == "THANOS" || text.value == "サノス" || text.value == "さのす" || text.value == "thonos"){
+    console.log('正解');
+    correct.style.display = 'block';
+  } else {
+    console.log('不正解');
+    notcorrect.style.display = 'block';
+  }
+});
+
+
+
+// 不正解Xボタン
+function butotnClick() {
+  notcorrect.style.display = 'none';
+}
+const backBtn = document.getElementById('getback-btn');
+backBtn.addEventListener('click', butotnClick);
+
+</script>
+</body>
+</html>

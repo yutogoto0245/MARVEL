@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>謎解きとMARVEL映画</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="謎解きとMARVEL映画">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body>
+  
+<header>
+  <nav id="snslogos">
+    <a><img class="snslogo" src="imgs/logo_instagram.png"></li>
+    <a><img class="snslogo" src="imgs/logo_x.png"></li>
+  </nav>
+  <nav id="navigation">
+    <a href="index.html">home</a>
+    <a href="index.html">home</a>
+    <a href="index.html">home</a>
+    <a href="index.html">home</a>
+    <a href="index.html">home</a>
+  </nav>
+</header>
+<main>
+  <div id="daniel-name-pic">
+    <img src="imgs/daniel.jpg">
+    <p>ダニエル</p>
+  </div>
+  <p>この問題は少し難しいぞ。まぁ、映画を観ていれば簡単だかな</p>
+   <!-- クイズ -->
+  <section id="quiz2">
+    <!-- A押下前 -->
+    <div id="quiz2-before">
+      <p>ニューヨーク大戦後、全人類を照らし暖めるものに残った文字を押す</p>
+      <ul>
+        <img src="imgs/Q2/p.png">
+        <img src="imgs/Q2/o.png">
+        <img src="imgs/Q2/t.png">
+        <img src="imgs/Q2/t.png">
+        <img src="imgs/Q2/s.png">
+      </ul>
+      <ul>
+        <img src="imgs/Q2/s.png">
+        <img src="imgs/Q2/t.png">
+        <img  id="btn-a" src="imgs/Q2/a.png">
+        <img src="imgs/Q2/r.png">
+        <img src="imgs/Q2/k.png">
+      </ul>
+      <ul>
+        <img src="imgs/Q2/b.png">
+        <img src="imgs/Q2/r.png">
+        <img src="imgs/Q2/u.png">
+        <img src="imgs/Q2/c.png">
+        <img src="imgs/Q2/e.png">
+      </ul>
+    </div>
+    <!-- A押下後 -->
+    <div id="quiz2-after">
+      <p>そこになぜか同じ人が二人。後から来た方がここで父に名乗った名は？</p>
+      <img src="imgs/Q2/quiz-befor.png">
+    </div>
+
+
+
+
+
+
+
+
+
+  </section>
+  <div id="input-box">
+    <input id="input-answer" type="text">
+  </div>
+  <div id="answer">
+    <a id="answer-btn"><img src="imgs/buttons/answer.png"></a>
+  </div>
+</main>
+<!-- 正解時表示 -->
+<div id="correct-answer-box">
+  <div>
+    <h1>正解！</h1>
+    <p>よくやった</p>
+  </div>
+</div>
+<!-- 不正解表示 -->
+<div id="notcorrect-answer-box">
+  <div>
+    <a id="getback-btn"><img src="imgs/buttons/batten.png"></a>
+    <h1>不正解</h1>
+    <p>もう一度確認しよう</p>
+  </div>
+</div>
+
+
+
+
+
+
+</main>
+
+
+
+<script>
+const btn = document.getElementById('answer-btn');
+const correct = document.getElementById('correct-answer-box');
+const text = document.getElementById('input-answer');
+const notcorrect = document.getElementById('notcorrect-answer-box');
+const body = document.getElementsByName('body');
+
+
+// HTML要素がクリックされたときにイベント処理を実行する
+btn.addEventListener('click', () => {
+  if (text.value == "ハワードスターク"){
+    console.log('正解');
+    correct.style.display = 'block';
+
+  } else {
+    console.log('不正解');
+    notcorrect.style.display = 'block';
+  }
+});
+
+
+
+// 不正解Xボタン
+function butotnClick() {
+  notcorrect.style.display = 'none';
+}
+
+const backBtn = document.getElementById('getback-btn');
+backBtn.addEventListener('click', butotnClick);
+
+
+
+//クイズ2--------------------------------------------
+const btnA = document.getElementById('btn-a');
+const quiz2Before = document.getElementById('quiz2-before');
+const quiz2After = document.getElementById('quiz2-after');
+
+btnA.addEventListener('click', btnAClick);
+function btnAClick() {
+  console.log('Aが押された');
+  quiz2Before.style.display = 'none';
+  quiz2After.style.display = 'block';
+}
+</script>
+</body>
+</html>

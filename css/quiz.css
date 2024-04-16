@@ -1,0 +1,151 @@
+/* クイズ1------------------------------------ */
+#quiz {
+  background-color: rgba(0, 0, 0, 1);
+  text-align: center;
+}
+#quiz1 > img {
+  width: 190px;
+}
+#mks {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+#mks > div {
+  width: 33%;
+  display: flex;
+  margin: auto auto 40px auto;
+}
+.mk {
+  width:  150px;
+}
+.math {
+  margin: auto;
+  width: 50%;
+}
+
+/* クイズ2------------------------------------------ */
+#quiz2 {
+  background-color: rgba(0, 0, 0, 1);
+  text-align: center;
+}
+
+
+#quiz2-before {
+  display: block;
+}
+
+#quiz2-after {
+  display: none;
+}
+#quiz2-after > img{
+  width: 480px;
+}
+
+
+/* クイズ4--------------------------------------------- */
+#quiz4 {
+  background-color: rgba(0, 0, 0, 1);
+  text-align: center;
+  height: 500px;
+  width: 1100px;
+  display: flex;
+  flex-flow: column;
+}
+
+#Changed-img {
+  margin: auto;
+  background-color: aliceblue;
+  justify-content: center;
+  position: relative;
+  width: 1000px;
+  height: 400px;
+  background-image: url(../imgs/Q4/K\ \(1\).png);
+}
+#Shuriken {
+  height: 70px;
+  z-index: 999;
+  top: 0px;
+}
+#Shuriken > img {
+  background-color: aqua;
+}
+
+
+
+#Changed-img > img {
+  display: inline-block;
+  background-color: blueviolet;
+  margin: 0;
+}
+/* 正解 */
+#Antoman {
+  position: absolute;
+  top: 5px;
+  left: 9px;
+  height: 380px;
+  /* background-color: ; */
+  z-index: 998;
+}
+#Bin {
+  position: absolute ;
+  top: 340px;
+  left: 250px;
+  height: 50px;
+}
+#Tanker {
+  position: absolute ;
+  top: 53px;
+  left: 175px;
+  height: 270px;
+}
+#Solt {
+  position: absolute;
+  top: 20px;
+  left: 390px;
+  height: 380px;
+}
+#Popo {
+  position: absolute;
+  top: 0px;
+  left: 650px;
+  height: 400px;
+}
+
+/* ２ */
+/* 
+#Antoman {
+  position: absolute;
+  top: 5px;
+  left: 6px;
+  height: 20px;
+}
+#Bin {
+  position: absolute ;
+  top: 5px;
+  left: 212px;
+  height: 340px;
+}
+#Tanker {
+  position: absolute ;
+  top: 10px;
+  left: 137px;
+  height: 50px;
+}
+#Solt {
+  position: absolute;
+  top: 20px;
+  left: 390px;
+  height: 100px;
+}
+#Popo {
+  position: absolute;
+  top: 150px;
+  left: 790px;
+  height: 240px;
+}
+ */
+
+
+

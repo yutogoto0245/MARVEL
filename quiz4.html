@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>謎解きとMARVEL映画</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="謎解きとMARVEL映画">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body>
+  
+<header>
+  <nav id="snslogos">
+    <a><img class="snslogo" src="imgs/logo_instagram.png"></li>
+    <a><img class="snslogo" src="imgs/logo_x.png"></li>
+  </nav>
+  <nav id="navigation">
+    <a href="index.html">home</a>
+    <a href="index.html">home</a>
+    <a href="index.html">home</a>
+    <a href="index.html">home</a>
+    <a href="index.html">home</a>
+  </nav>
+</header>
+<main>
+  <div id="daniel-name-pic">
+    <img src="imgs/daniel.jpg">
+    <p>ダニエル</p>
+  </div>
+  <p>この問題は少し難しいぞ。まぁ、映画を観ていれば簡単だかな</p>
+  <section id="quiz4">
+    <div id="Shuriken">
+      <img id="Red" src="imgs/Q4/red.png" width="80px" height="80px">
+      <img id="Blue" src="imgs/Q4/blue.png" width="80px" height="80px">
+    </div>
+    <div id="Changed-img">
+      <img id="Antoman" src="imgs/Q4/antman.png">
+      <img id="Bin" src="imgs/Q4/bin.png">
+      <img id="Tanker" src="imgs/Q4/tanker.png">
+      <img id="Solt" src="imgs/Q4/solt.png">
+      <img id="Popo" src="imgs/Q4/popo.png">
+    </div>
+  </section>
+
+</main>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+
+
+<script>
+
+// 手裏剣制御--------------------------------------------------------
+function picMove(onpointermove) {
+  if(event.buttons){
+      this.style.left     =  this.offsetLeft + event.movementX + 'px'
+      this.style.top      =  this.offsetTop  + event.movementY + 'px'
+      this.style.position = 'absolute'
+      this.draggable      = false
+      this.setPointerCapture(event.pointerId)
+
+      let RedPosi = Red.getBoundingClientRect();
+      let RedLeft = Number(window.pageXOffset + RedPosi.left + 40); 
+      let RedTop = Number(window.pageYOffset + RedPosi.top + 40);
+      let RedHeight = RedPosi.height + window.pageYOffset + RedPosi.top + 'px';
+
+      let BluePosi = Blue.getBoundingClientRect();
+      let BlueLeft = Number(window.pageXOffset +BluePosi.left); 
+      let BlueTop = Number(window.pageYOffset + BluePosi.top);
+      let BlueHeight = BluePosi.height + window.pageYOffset + BluePosi.top + 'px';
+      
+      const Antoman = document.getElementById('Antoman');
+      let AntomanPosi = Antoman.getBoundingClientRect();
+      let AntomanLeft = Number(window.pageXOffset + AntomanPosi.left);
+      let AntomanWidth = Number(AntomanPosi.width + window.pageXOffset + AntomanPosi.left);
+      let AntomanTop = Number(window.pageYOffset + AntomanPosi.top);
+      let AntomanHeight = Number(AntomanPosi.height + window.pageYOffset + AntomanPosi.top);
+
+      const Tanker = document.getElementById('Tanker');
+      let TankerPosi = Tanker.getBoundingClientRect();
+      let TankerLeft = Number(window.pageXOffset + TankerPosi.left);
+      let TankerWidth = Number(TankerPosi.width + window.pageXOffset + TankerPosi.left);
+      let TankerTop = Number(window.pageYOffset + TankerPosi.top);
+      let TankerHeight = Number(TankerPosi.height + window.pageYOffset + TankerPosi.top - 40);
+      console.log(TankerLeft);
+      console.log(TankerWidth);
+      console.log(TankerTop);
+
+      const Bin = document.getElementById('Bin');
+      let BinPosi = Bin.getBoundingClientRect();
+      let BinLeft = Number(window.pageXOffset + BinPosi.left);
+      let BinWidth = Number(BinPosi.width + window.pageXOffset + BinPosi.left);
+      let BinTop = Number(window.pageYOffset + BinPosi.top);
+      let BinHeight = Number(BinPosi.height + window.pageYOffset + BinPosi.top);
+
+      const Solt = document.getElementById('Solt');
+      let SoltPosi = Solt.getBoundingClientRect();
+      let SoltLeft = Number(window.pageXOffset + SoltPosi.left);
+      let SoltWidth = Number(SoltPosi.width + window.pageXOffset + SoltPosi.left);
+      let SoltTop = Number(window.pageYOffset + SoltPosi.top);
+      let SoltHeight = Number(SoltPosi.height + window.pageYOffset + SoltPosi.top);
+
+      const Popo = document.getElementById('Popo');
+      let PopoPosi = Popo.getBoundingClientRect();
+      let PopoLeft = Number(window.pageXOffset + PopoPosi.left);
+      let PopoWidth = Number(PopoPosi.width + window.pageXOffset + PopoPosi.left);
+      let PopoTop = Number(window.pageYOffset + PopoPosi.top);
+      let PopoHeight = Number(PopoPosi.height + window.pageYOffset + PopoPosi.top);
+
+
+      if(RedLeft > AntomanLeft && RedLeft < AntomanWidth && RedTop > AntomanTop && RedTop < AntomanHeight){
+        Antoman.style.backgroundColor = 'red';
+        Antoman.style.top = '5px';
+        Antoman.style.left = '6px';
+        Antoman.style.height = '20px';
+      } else if(BlueLeft > AntomanLeft && BlueLeft < AntomanWidth && BlueTop > AntomanTop && BlueTop < AntomanHeight){
+        Antoman.style.background = 'blue';
+        Antoman.style.top = '5px';
+        Antoman.style.left = '9px';
+        Antoman.style.height = '380px';
+      } else if(RedLeft > TankerLeft && RedLeft < TankerWidth && RedTop > TankerTop && RedTop < TankerHeight){
+        Tanker.style.backgroundColor = 'red';
+        Tanker.style.top = '80px';
+        Tanker.style.left = '207px';
+        Tanker.style.height = '50px';
+        console.log(TankerLeft);
+        console.log(TankerWidth);
+        console.log(TankerTop);
+      } else if(BlueLeft > TankerLeft && BlueLeft < TankerWidth && BlueTop > TankerTop && BlueTop < TankerHeight){
+        Tanker.style.backgroundColor = 'blue';
+        Tanker.style.top = '53px';
+        Tanker.style.left = '175px';
+        Tanker.style.height = '270px';
+    }
+  }
+}
+const Red = document.getElementById('Red');
+const Blue = document.getElementById('Blue');
+Red.addEventListener('pointermove', picMove);
+Blue.addEventListener('pointermove', picMove);
+
+// ------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+</script>
+

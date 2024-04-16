@@ -1,0 +1,62 @@
+body {
+  max-width: 1080px;
+  min-width: 960px;
+  margin: 0 auto 0 auto;
+  color: aliceblue;
+  background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),
+  url(../imgs/background-img1.jpg);
+  background-size: cover;
+} 
+p {
+  font-size: 20px;
+}
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 30px;
+}
+
+/* ヘッダー---------------------------------*/
+header {
+  background-color: rgba(200, 34, 34, 0.897);
+  display: flex;
+  justify-content: space-between;
+}
+.snslogo {
+  display: inline-block;
+  width: 40px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+#navigation {
+  margin: auto;
+  font-size: large;
+  font-size: 30px;
+}
+#navigation > a {
+  color: rgba(255, 255, 255, 1);
+  margin-left: 30px;
+  text-decoration: none;
+}
+/* メイン------------------------------------- */
+main > p {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#tom-name-pic > img {
+  display: inline-block;
+  width: 160px;
+}
+#tom-name-pic > p {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* スタートボタン--------------------------------- */
+#start-btn {
+  text-align: center;
+}

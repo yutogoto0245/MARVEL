@@ -1,0 +1,134 @@
+body {
+  max-width: 1080px;
+  min-width: 960px;
+  margin: 0 auto 0 auto;
+  color: aliceblue;
+  background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),
+  url(../imgs/background-img1.jpg);
+  background-size: cover;
+} 
+p {
+  font-size: 20px;
+}
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 30px;
+}
+
+/* ヘッダー---------------------------------*/
+header {
+  background-color: rgba(200, 34, 34, 0.897);
+  display: flex;
+  justify-content: space-between;
+}
+.snslogo {
+  display: inline-block;
+  width: 40px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+#navigation {
+  margin: auto;
+  font-size: large;
+  font-size: 30px;
+}
+#navigation > a {
+  color: rgba(255, 255, 255, 1);
+  margin-left: 30px;
+  text-decoration: none;
+}
+
+
+/* メイン----------------------------------------- */
+#daniel-name-pic {
+  margin-top: 60px;
+}
+#daniel-name-pic > img {
+  display: inline-block;
+  width: 160px;
+}
+#daniel-name-pic > p {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
+
+
+/* ボタン */
+#answer {
+  text-align: center;
+}
+#answer > a {
+  cursor:pointer
+}
+#input-box {
+  text-align: center;
+}
+#input-answer {
+  font-size: 40px;
+  width: 400px;
+}
+
+
+
+/* 正解時表示 */
+#correct-answer-box {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+#correct-answer-box > div {
+  position: absolute;
+  color: black;
+  background-color: rgba(255, 255, 255, 1);
+  margin: auto;
+  width: 50%;
+  height: 50%;
+  left: 25%;
+  right: 25%;
+  top: 25%;
+  bottom: 25%;
+}
+#correct-answer-box > div > a {
+  position: absolute;
+  right: 0;
+}
+
+
+
+
+
+/* 不正解表示 */
+#notcorrect-answer-box {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+#notcorrect-answer-box > div {
+  position: absolute;
+  background-color: rgba(200, 34, 34, 1);
+  margin: auto;
+  width: 50%;
+  height: 50%;
+  left: 25%;
+  right: 25%;
+  top: 25%;
+  bottom: 25%;
+}
+#notcorrect-answer-box > div > a {
+  position: absolute;
+  right: 0;
+  cursor:pointer
+}
