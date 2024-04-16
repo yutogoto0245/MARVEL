@@ -68,12 +68,14 @@
   z-index: 999;
   top: 0px;
 }
+#Red, #Blue {
+  cursor: grab;
+}
 
 
 
 #Changed-img > img {
   display: inline-block;
-  /* background-color: blueviolet; */
   margin: 0;
 }
 /* 正解 */
