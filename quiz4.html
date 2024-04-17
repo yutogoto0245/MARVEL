@@ -43,15 +43,36 @@
       <img id="Popo" src="imgs/Q4/popo.png">
     </div>
   </section>
-
+  <div id="input-box">
+    <input id="input-answer" type="text">
+  </div>
+  <div id="answer">
+    <a id="answer-btn"><img src="imgs/buttons/answer.png"></a>
+  </div>
 </main>
+<!-- 正解時表示 -->
+<div id="correct-answer-box">
+  <div>
+    <h1>正解！</h1>
+    <p>よくやった</p>
+  </div>
+</div>
+<!-- 不正解表示 -->
+<div id="notcorrect-answer-box">
+  <div>
+    <a id="getback-btn"><img src="imgs/buttons/batten.png"></a>
+    <h1>不正解</h1>
+    <p>もう一度確認しよう</p>
+  </div>
+</div>
+
+
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 
 
 <script>
-
 // 手裏剣制御--------------------------------------------------------
 function picMove(onpointermove) {
   if(event.buttons){
@@ -170,6 +191,29 @@ Blue.addEventListener('pointermove', picMove);
 
 // ------------------------------------------------------------------
 
+const btnQuiz1 = document.getElementById('answer-btn');
+const correct = document.getElementById('correct-answer-box');
+const text = document.getElementById('input-answer');
+const notcorrect = document.getElementById('notcorrect-answer-box');
+const body = document.getElementsByName('body');
+
+// HTML要素がクリックされたときにイベント処理を実行する
+btnQuiz1.addEventListener('click', () => {
+  if (text.value == "MODOK" || text.value == "モードック" || text.valu == "modok"){
+    console.log('正解');
+    correct.style.display = 'block';
+  } else {
+    console.log('不正解');
+    notcorrect.style.display = 'block';
+  }
+});
+
+// 不正解Xボタン
+function butotnClick() {
+  notcorrect.style.display = 'none';
+}
+const backBtn = document.getElementById('getback-btn');
+backBtn.addEventListener('click', butotnClick);
 
 
 

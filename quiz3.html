@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>謎解きとMARVEL映画</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="謎解きとMARVEL映画">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body>
+  
+<header>
+  <nav id="snslogos">
+    <a><img class="snslogo" src="imgs/logo_instagram.png"></li>
+    <a><img class="snslogo" src="imgs/logo_x.png"></li>
+  </nav>
+  <nav id="navigation">
+    <a href="index.html">home</a>
+    <a href="index.html">home</a>
+    <a href="index.html">home</a>
+    <a href="index.html">home</a>
+    <a href="index.html">home</a>
+  </nav>
+</header>
+<main>
+  <div id="daniel-name-pic">
+    <img src="imgs/daniel.jpg">
+    <p>ダニエル</p>
+  </div>
+  <p>注意深く映画を見ていれば、必ず解けるぞ</p>
+  <section id="quiz3">
+    <div id="push-before">
+      <img id="CaptainAmerica" src="imgs/Q3/CAPTAIN AMERICA.jpg" height="270px">
+      <img id="IRONMAN" src="imgs/Q3/IRONMAN.jpg" height="270px">
+      <img id="STRANGE" src="imgs/Q3/STRANGE.jpg" height="270px">
+      <img id="THOR" src="imgs/Q3/THOR.jpg" height="270px">
+      <img id="CAPTAINMARVEL" src="imgs/Q3/CAPTAIN MARVEL.jpg" height="270px">
+    </div>
+    <div id="push-after">
+      <img class="imgPushed" id="imgPushed_CaptainAmerica" src="imgs/Q3/CAPTAIN AMERICA_pushed.png" height="270px">
+      <img class="imgPushed" id="imgPushed_Ironman" src="imgs/Q3/IRONMAN_pushed.png" height="270px">
+      <img class="imgPushed" id="imgPushed_Strange" src="imgs/Q3/STRANGE_pushed.png" height="270px">
+      <img class="imgPushed" id="imgPushed_Thor" src="imgs/Q3/THOR_pushed.png" height="270px">
+      <img class="imgPushed" id="imgPushed_CaptainMarvel" src="imgs/Q3/CAPTAIN MARVEL_pushed.png" height="270px">
+      <img class="imgPushed" id="imgPushed_Close" src="imgs/buttons/batten.png" height="40px">
+    </div>
+  </section>
+  <div id="input-box">
+    <input id="input-answer" type="text">
+  </div>
+  <div id="answer">
+    <a id="answer-btn"><img src="imgs/buttons/answer.png"></a>
+  </div>
+</main>
+<!-- 正解時表示 -->
+<div id="correct-answer-box">
+  <div>
+    <h1>正解！</h1>
+    <p>よくやった</p>
+  </div>
+</div>
+<!-- 不正解表示 -->
+<div id="notcorrect-answer-box">
+  <div>
+    <a id="getback-btn"><img src="imgs/buttons/batten.png"></a>
+    <h1>不正解</h1>
+    <p>もう一度確認しよう</p>
+  </div>
+</div>
+
+
+
+</main>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+<script>
+  const PushAfter = document.getElementById('push-after');
+  const PushClose = document.getElementById('imgPushed_Close');
+  function AMERICA() {
+    PushAfter.style.display = "inline-block";
+    PushClose.style.display = "inline-block";
+    imgPushed_CaptainAmerica.style.display = "inline-block";
+  };
+
+
+
+$('#CaptainAmerica').on('click', AMERICA);
+
+</script>
+
+
+
+
+
+
+
+
+
+</html>
