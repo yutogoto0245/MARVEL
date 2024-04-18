@@ -50,6 +50,15 @@
   position: relative;
 }
 
+#push-before > img {
+  cursor: pointer;
+  padding: 5px;
+}
+
+#push-before > img:hover {
+  background-color: aliceblue;
+}
+
  #push-after {
   display: none;
   position: absolute;
@@ -63,7 +72,7 @@
 .imgPushed {
   display: none;
 }
-#imgPushed_CaptainAmerica {
+#imgPushed_CaptainAmerica, #imgPushed_Ironman, #imgPushed_Strange, #imgPushed_Thor, #imgPushed_CaptainMarvel {
   display: none;
   margin: auto;
 }
@@ -71,6 +80,7 @@
   position: absolute;
   display: none;
   background-color: aqua;
+  cursor: pointer;
 } 
 
 

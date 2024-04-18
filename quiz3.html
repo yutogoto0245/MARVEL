@@ -43,7 +43,7 @@
       <img class="imgPushed" id="imgPushed_Strange" src="imgs/Q3/STRANGE_pushed.png" height="270px">
       <img class="imgPushed" id="imgPushed_Thor" src="imgs/Q3/THOR_pushed.png" height="270px">
       <img class="imgPushed" id="imgPushed_CaptainMarvel" src="imgs/Q3/CAPTAIN MARVEL_pushed.png" height="270px">
-      <img class="imgPushed" id="imgPushed_Close" src="imgs/buttons/batten.png" height="40px">
+      <img class="imgPushed" id="imgPushed_Close" src="imgs/buttons/batten.png" height="30px">
     </div>
   </section>
   <div id="input-box">
@@ -86,9 +86,79 @@
     imgPushed_CaptainAmerica.style.display = "inline-block";
   };
 
+  function IRONMAN() {
+    PushAfter.style.display = "inline-block";
+    PushClose.style.display = "inline-block";
+    imgPushed_Ironman.style.display = "inline-block";
+  };
 
+  function STRANGE() {
+    PushAfter.style.display = "inline-block";
+    PushClose.style.display = "inline-block";
+    imgPushed_Strange.style.display = "inline-block";
+  };
+
+  function THOR() {
+    PushAfter.style.display = "inline-block";
+    PushClose.style.display = "inline-block";
+    imgPushed_Thor.style.display = "inline-block";
+  };
+
+  function CAPTAINMARVEL() {
+    PushAfter.style.display = "inline-block";
+    PushClose.style.display = "inline-block";
+    imgPushed_CaptainMarvel.style.display = "inline-block";
+  };
+
+
+  function PushBack() {
+    PushAfter.style.display = "none";
+    PushClose.style.display = "none";
+    imgPushed_CaptainAmerica.style.display = "none";
+    imgPushed_Ironman.style.display = "none";
+    imgPushed_Strange.style.display = "none";
+    imgPushed_Thor.style.display = "none";
+    imgPushed_CaptainMarvel.style.display = "none";
+  };
 
 $('#CaptainAmerica').on('click', AMERICA);
+$('#IRONMAN').on('click', IRONMAN);
+$('#STRANGE').on('click', STRANGE);
+$('#THOR').on('click', THOR);
+$('#CAPTAINMARVEL').on('click', CAPTAINMARVEL);
+$('#imgPushed_Close').on('click', PushBack);
+
+// 正解・不正解
+
+const btnQuiz1 = document.getElementById('answer-btn');
+const correct = document.getElementById('correct-answer-box');
+const text = document.getElementById('input-answer');
+const notcorrect = document.getElementById('notcorrect-answer-box');
+const body = document.getElementsByName('body');
+
+// HTML要素がクリックされたときにイベント処理を実行する
+btnQuiz1.addEventListener('click', () => {
+  if (text.value == "グース" || text.value == "ぐーす" || text.value == "goose" || text.value == "GOOSE"){
+    console.log('正解');
+    correct.style.display = 'block';
+  } else {
+    console.log('不正解');
+    notcorrect.style.display = 'block';
+  }
+});
+
+// 不正解Xボタン
+function butotnClick() {
+  notcorrect.style.display = 'none';
+}
+const backBtn = document.getElementById('getback-btn');
+backBtn.addEventListener('click', butotnClick);
+
+
+
+
+
+
 
 </script>
 
