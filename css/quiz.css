@@ -150,3 +150,14 @@
   left: 790px;
   height: 240px;
 }
+
+/* Q5 */
+#quiz5 {
+  background-color: rgba(0, 0, 0, 1);
+  text-align: center;
+  padding: 10px;
+}
+#quiz5 > div > img {
+  display: inline-block;
+  width: 7%;
+}

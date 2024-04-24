@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>謎解きとMARVEL映画</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="謎解きとMARVEL映画">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body>
+  
+<header>
+  <nav id="snslogos">
+    <a><img class="snslogo" src="imgs/logo_instagram.png"></li>
+    <a><img class="snslogo" src="imgs/logo_x.png"></li>
+  </nav>
+  <nav id="navigation">
+    <a href="index.html">home</a>
+    <a href="index.html">home</a>
+    <a href="index.html">home</a>
+    <a href="index.html">home</a>
+    <a href="index.html">home</a>
+  </nav>
+</header>
+<main>
+  <div id="daniel-name-pic">
+    <img src="imgs/daniel.jpg">
+    <p>ダニエル</p>
+  </div>
+  <p>注意深く映画を見ていれば、必ず解けるぞ</p>
+  <section id="quiz5">
+    <div>
+      <img id="antman" src="imgs/Q5/antman.jpeg">
+      <img src="imgs/Q5/wasp.jpeg">
+      <img src="imgs/Q5/ironman.jpeg">
+      <img src="imgs/Q5/spider-man.jpeg">
+      <img src="imgs/Q5/strange.jpeg">
+      <img src="imgs/Q5/quil.jpeg">
+      <img src="imgs/Q5/drax.jpeg">
+      <img src="imgs/Q5/mantis.jpeg">
+      <img src="imgs/Q5/captainamerica.jpeg">
+      <img src="imgs/Q5/bucky.jpeg">
+      <img src="imgs/Q5/saw.jpeg">
+      <img src="imgs/Q5/hulk.jpeg">
+      <img src="imgs/Q5/blackpanther.jpeg">
+      <img src="imgs/Q5/blackwidow.jpeg">
+      <img src="imgs/Q5/falcon.jpeg">
+      <img src="imgs/Q5/groot.jpeg">
+      <img src="imgs/Q5/rocket.jpeg">
+      <img src="imgs/Q5/nebula.jpeg">
+      <img src="imgs/Q5/wanda.jpeg">
+      <img src="imgs/Q5/vision.jpeg">
+      <img src="imgs/Q5/rhody.jpeg">
+      <img src="imgs/Q5/okoye.jpeg">
+      <img src="imgs/Q5/mariahill.jpg">
+      <img src="imgs/Q5/nick-fury_fix.jpeg">
+      <img src="imgs/Q5/captainmarvel.jpeg">
+      <img src="imgs/Q5/gamora.jpeg">
+    </div>
+  </section>
+  <div id="input-box">
+    <input id="input-answer" type="text">
+  </div>
+  <div id="answer">
+    <a id="answer-btn"><img src="imgs/buttons/answer.png"></a>
+  </div>
+</main>
+<!-- 正解時表示 -->
+<div id="correct-answer-box">
+  <div>
+    <h1>正解！</h1>
+    <p>よくやった</p>
+  </div>
+</div>
+<!-- 不正解表示 -->
+<div id="notcorrect-answer-box">
+  <div>
+    <a id="getback-btn"><img src="imgs/buttons/batten.png"></a>
+    <h1>不正解</h1>
+    <p>もう一度確認しよう</p>
+  </div>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+
+
+<script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+const btnQuiz1 = document.getElementById('answer-btn');
+const correct = document.getElementById('correct-answer-box');
+const text = document.getElementById('input-answer');
+const notcorrect = document.getElementById('notcorrect-answer-box');
+const body = document.getElementsByName('body');
+
+// HTML要素がクリックされたときにイベント処理を実行する
+btnQuiz1.addEventListener('click', () => {
+  if (text.value == "MODOK" || text.value == "モードック" || text.valu == "modok"){
+    console.log('正解');
+    correct.style.display = 'block';
+  } else {
+    console.log('不正解');
+    notcorrect.style.display = 'block';
+  }
+});
+
+// 不正解Xボタン
+function butotnClick() {
+  notcorrect.style.display = 'none';
+}
+const backBtn = document.getElementById('getback-btn');
+backBtn.addEventListener('click', butotnClick);
+
+
+
+
+
+
+
+
+
+</script>
+
